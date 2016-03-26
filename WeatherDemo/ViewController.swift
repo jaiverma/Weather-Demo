@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func getDataButtonClicked(sender: AnyObject) {
+        cityNameTextField.text = cityNameTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(cityNameTextField.text)")
     }
     
